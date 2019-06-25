@@ -11,14 +11,14 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/api/getADList': {
+      '/api/getDiscList': {
         target: 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg?_=1561457330545&g_tk=5381&uin=0&format=json',
         bypass: function (req, res, proxyOptions) {
           req.headers.referer = 'https://c.y.qq.com';
           req.headers.host = 'c.y.qq.com';
         },
         pathRewrite: {
-          '^/api/getADList': ''
+          '^/api/getDiscList': ''
         }
       }
     },

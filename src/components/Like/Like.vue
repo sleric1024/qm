@@ -19,7 +19,7 @@ export default {
   },
 
   created () {
-    this.$axios.get('/api/getADList').then(
+    this.$axios.get('/api/getDiscList/fcgi-bin/fcg_yqqhomepagerecommend.fcg?_=1561458800007&g_tk=5381&uin=0&format=json').then(
       res => {
         debugger
         this.imgs = res.data.messages
