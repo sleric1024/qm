@@ -1,7 +1,7 @@
 <template>
   <div>
     <mt-header fixed title="QQ音乐"></mt-header>
-    <router-view></router-view>
+    <router-view class="content"></router-view>
     <mt-tabbar v-model="selected">
     <mt-tab-item id="like">
       <img slot="icon" src="./assets/like.png">

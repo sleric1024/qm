@@ -1,3 +1,12 @@
 body {
   margin: 0;
 }
+.mint-swipe {
+  height: 200px;
+}
+.mint-swipe img {
+  width: 100%;
+}
+.content {
+  margin-top: 40px;
+}

@@ -1,7 +1,9 @@
 <template>
   <div>
-    <mt-swipe :auto="4000" :for="img in imgs">
-      <mt-swipe-item>{{img}}</mt-swipe-item>
+    <mt-swipe :auto="4000">
+      <mt-swipe-item v-for="item in sliders">
+        <img :src="item.picUrl"/>
+      </mt-swipe-item>
     </mt-swipe>
   </div>
 </template>
@@ -12,16 +14,15 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      imgs: []
+      sliders: []
     }
   },
 
   created () {
-    this.$axios.get('/api/getDiscList/fcgi-bin/fcg_yqqhomepagerecommend.fcg?_=1561458800007&g_tk=5381&uin=0&format=json').then(
+    this.$axios.get('/api/getDiscList').then(
       res => {
         var sliders = res.data.data.slider;
-        var imgs = sliders.map(val => val.picUrl);
-        this.imgs = imgs;
+        this.sliders = sliders;
       }
     ).catch(
       error => console.log(error)
