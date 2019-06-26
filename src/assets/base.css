@@ -1,0 +1,55 @@
+* {
+  font-family: "hiragino sans gb", arial !important;
+}
+body {
+  margin: 0;
+}
+.mint-header {
+  background-color: #62c47d;
+}
+.mint-swipe {
+  height: 200px;
+}
+.mint-swipe img {
+  height: 100%;
+}
+.content {
+  margin-top: 40px;
+}
+ul.raidoList {
+  overflow: hidden;
+  padding: 0;
+}
+.raidoList li {
+  list-style: none;
+  float: left;
+  width: 48%;
+  -webkit-box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-left: 1%;
+  margin-right: 1%;
+  overflow: hidden;
+}
+.raidoList li a {
+  display: block;
+}
+.raidoList li img {
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: 1;
+}
+.raidoList li div {
+  text-align: center;
+}
+.footer_logo {
+  display: block;
+  width: 200px;
+  height: 55px;
+  margin: 0 auto 10px;
+  background-image: url(../assets/logo_ch.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
+}

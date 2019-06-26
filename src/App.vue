@@ -3,17 +3,17 @@
     <mt-header fixed title="QQ音乐"></mt-header>
     <router-view class="content"></router-view>
     <mt-tabbar v-model="selected">
-    <mt-tab-item id="like">
-      <img slot="icon" src="./assets/like.png">
-      喜欢
+    <mt-tab-item id="recommond">
+      <img slot="icon" src="./assets/thumbs-up.png">
+      推荐
     </mt-tab-item>
-    <mt-tab-item id="collect">
-      <img slot="icon" src="./assets/collect.png">
-      收藏
+    <mt-tab-item id="ranking">
+      <img slot="icon" src="./assets/stats.png">
+      排行榜
     </mt-tab-item>
-    <mt-tab-item id="history">
-      <img slot="icon" src="./assets/history.png">
-      记录
+    <mt-tab-item id="search">
+      <img slot="icon" src="./assets/search.png">
+      搜索
     </mt-tab-item>
   </mt-tabbar>
   </div>
