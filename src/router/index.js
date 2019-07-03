@@ -12,6 +12,12 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path: '/',
+      redirect: {
+        name: 'recommond'
+      }
+    },
+    {
       path: '/recommond',
       name: 'recommond',
       component: Recommend

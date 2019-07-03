@@ -2,14 +2,14 @@
   <!-- ADList -->
   <div>
     <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in sliders">
+      <mt-swipe-item v-for="(item, index) in sliders" :key="index">
         <img :src="item.picUrl"/>
       </mt-swipe-item>
     </mt-swipe>
     <!-- Radio List -->
     <p class="title">电台</p>
     <ul class="raidoList">
-      <li v-for="item in radioList">
+      <li v-for="(item, index) in radioList" :key="index">
         <a>
           <div class="listMedia">
             <img :src="item.picUrl">
