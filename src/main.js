@@ -7,10 +7,14 @@ import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import '@/assets/base.css'
 import Axios from 'axios'
+import MyUl from '@/components/Common/MyUl'
+import MyLi from '@/components/Common/MyLi'
 
 Vue.prototype.$axios = Axios
 Vue.config.productionTip = false
 Vue.use(MintUI)
+Vue.component(MyUl.name, MyUl)
+Vue.component(MyLi.name, MyLi)
 
 /* eslint-disable no-new */
 new Vue({

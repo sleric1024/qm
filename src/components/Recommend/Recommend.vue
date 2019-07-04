@@ -20,7 +20,17 @@
         </a>
       </li>
     </ul>
-    <div class="footer_logo"></div>
+    <!-- <div class="footer_logo"></div> -->
+
+    <!-- Recommoned -->
+    <p class="title">为你推荐</p>
+    <my-ul class="recommondList">
+      <my-li v-for="(item, index) in recommondList" :key="index">
+        <a>
+          <div class="listInfo"><p :class="item.class">{{ item.name }}</p></div>
+        </a>
+      </my-li>
+    </my-ul>
   </div>
 </template>
 
@@ -31,7 +41,23 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       sliders: [],
-      radioList: []
+      radioList: [],
+      recommondList: [{
+        name: "内地",
+        class: "nd"
+      }, {
+        name: "港台",
+        class: "gt"
+      }, {
+        name: "欧美",
+        class: "om"
+      }, {
+        name: "韩国",
+        class: "hg"
+      }, {
+        name: "日本",
+        class: "rb"
+      }]
     }
   },
 
@@ -49,9 +75,35 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
  p.title {
     line-height: 0px;
     padding: 4px 5px;
  }
+ul.raidoList {
+  overflow: hidden;
+  padding: 0;
+}
+.raidoList li {
+  float: left;
+  width: 48%;
+  -webkit-box-sizing: border-box;
+  margin-bottom: 10px;
+  margin-left: 1%;
+  margin-right: 1%;
+  overflow: hidden;
+}
+.raidoList li a {
+  display: block;
+}
+.raidoList li img {
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  z-index: 1;
+}
+.raidoList li div {
+  text-align: center;
+}
 </style>
