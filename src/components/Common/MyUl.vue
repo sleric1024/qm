@@ -17,7 +17,7 @@ export default {
 
 
 <style scoped>
-ul {
+ul.recommondList {
   overflow: hidden;
   padding: 0;
 }

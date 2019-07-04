@@ -29,6 +29,26 @@ export default new Router({
       path: '/search',
       name: 'search',
       component: Search
+    }, {
+      name: 'recommoned.neidi',
+      path: '/recommond/neidi',
+      component: Ranking
+    }, {
+      name: 'recommoned.gangtai',
+      path: '/recommond/gangtai',
+      component: Ranking
+    }, {
+      name: 'recommoned.oumei',
+      path: '/recommond/oumei',
+      component: Ranking
+    }, {
+      name: 'recommoned.hanguo',
+      path: '/recommond/hanguo',
+      component: Ranking
+    }, {
+      name: 'recommoned.riben',
+      path: '/recommond/riben',
+      component: Ranking
     }
   ]
 })

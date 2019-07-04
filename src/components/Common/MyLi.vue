@@ -17,7 +17,7 @@ export default {
 
 
 <style scoped>
-ul div {
+ul.recommondList div {
   display: inline-block;
   width: 20%;
   height: 100px;
@@ -25,7 +25,7 @@ ul div {
   float: left;
   overflow: hidden;
 }
-ul p {
+ul.recommondList p {
     background-image: url(../../assets/bg_index_top.jpg);
     background-repeat: no-repeat;
     background-position-y: -180px;
@@ -40,22 +40,22 @@ ul p {
     color: aliceblue;
     margin-top: -10px;
 }
-ul p:hover {
+ul.recommondList p:hover {
     -webkit-transform: scale(1.06);
     -webkit-transition: -webkit-transform .75s cubic-bezier(0,1,.75,1);
     transform: scale(1.06);
     transition: transform .75s cubic-bezier(0,1,.75,1)
 }
-ul p.gt {
+ul.recommondList p.gt {
    background-position-x: -240px;
 }
-ul p.om {
+ul.recommondList p.om {
    background-position-x: -460px;
 }
-ul p.hg{
+ul.recommondList p.hg{
    background-position-x: -680px;
 }
-ul p.rb{
+ul.recommondList p.rb{
    background-position-x: -900px;
 }
 </style>

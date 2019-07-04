@@ -25,10 +25,10 @@
     <!-- Recommoned -->
     <p class="title">为你推荐</p>
     <my-ul class="recommondList">
-      <my-li v-for="(item, index) in recommondList" :key="index">
-        <a>
+      <my-li class="myli" v-for="(item, index) in recommondList" :key="index">
+        <router-link :to="item.router">
           <div class="listInfo"><p :class="item.class">{{ item.name }}</p></div>
-        </a>
+        </router-link>
       </my-li>
     </my-ul>
   </div>
@@ -43,20 +43,35 @@ export default {
       sliders: [],
       radioList: [],
       recommondList: [{
-        name: "内地",
-        class: "nd"
+        name: '内地',
+        class: 'nd',
+        router: {
+          name: 'recommoned.neidi'
+        }
       }, {
-        name: "港台",
-        class: "gt"
+        name: '港台',
+        class: 'gt',
+        router: {
+          name: 'recommoned.gangtai'
+        }
       }, {
-        name: "欧美",
-        class: "om"
+        name: '欧美',
+        class: 'om',
+        router: {
+          name: 'recommoned.oumei'
+        }
       }, {
-        name: "韩国",
-        class: "hg"
+        name: '韩国',
+        class: 'hg',
+        router: {
+          name: 'recommoned.hanguo'
+        }
       }, {
-        name: "日本",
-        class: "rb"
+        name: '日本',
+        class: 'rb',
+        router: {
+          name: 'recommoned.riben'
+        }
       }]
     }
   },
@@ -76,7 +91,7 @@ export default {
 </script>
 
 <style scoped>
- p.title {
+p.title {
     line-height: 0px;
     padding: 4px 5px;
  }
