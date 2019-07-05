@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import Recommend from '@/components/Recommend/Recommend'
 import Ranking from '@/components/Ranking/Ranking'
 import Search from '@/components/Search/Search'
+import Neid from '@/components/Recommend/Neid'
+
 
 Vue.use(Router)
 // 注册全局组建 router-view router link
@@ -32,7 +34,7 @@ export default new Router({
     }, {
       name: 'recommoned.neidi',
       path: '/recommond/neidi',
-      component: Ranking
+      component: Neid
     }, {
       name: 'recommoned.gangtai',
       path: '/recommond/gangtai',
