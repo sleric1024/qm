@@ -215,10 +215,21 @@
 <script>
 export default {
 	name: 'nei-di',
-  data() {
+	data() {
 		return {
-
+			recomData: {}
 		}
+	},
+
+	mounted() {
+		 this.$axios.get('/api2/getRecomList').then(
+      res => {
+				this.recomData = res;
+				debugger;
+      }
+    ).catch(
+      error => console.log(error)
+    )
 	}
 }
 </script>

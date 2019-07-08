@@ -9,6 +9,7 @@ import '@/assets/base.css'
 import Axios from 'axios'
 import MyUl from '@/components/Common/MyUl'
 import MyLi from '@/components/Common/MyLi'
+import store from './../store/index'
 
 Vue.prototype.$axios = Axios
 Vue.config.productionTip = false
@@ -20,6 +21,7 @@ Vue.component(MyLi.name, MyLi)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

@@ -35,8 +35,19 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+Vue.use(Vuex);
+
+var store = new Vuex.Store({
+  recomData: {}
+});
+
 export default {
+  store: store,
   name: 'HelloWorld',
+  RECOM_DATA: {},
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

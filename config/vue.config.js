@@ -11,8 +11,15 @@ module.exports = {
                 pathRewrite: {
                   '^/api': ''
                 }
+            },
+            '/api2': {
+                target: 'https://u.y.qq.com',
+                changeOrigin: true,
+                ws: true,
+                pathRewrite: {
+                  '^/api2': ''
+                }
             }
         }
     }
 }
-
