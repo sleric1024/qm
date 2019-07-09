@@ -20,8 +20,6 @@
         </a>
       </li>
     </ul>
-    <!-- <div class="footer_logo"></div> -->
-
     <!-- Recommoned -->
     <p class="title">为你推荐</p>
     <my-ul class="recommondList">
@@ -31,6 +29,8 @@
         </router-link>
       </my-li>
     </my-ul>
+
+   <div class="footer_logo"></div>
   </div>
 </template>
 

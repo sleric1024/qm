@@ -1,211 +1,21 @@
 <template>
 	<ul>
-		<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
+		<li v-for="(item, index) in recomData" :key="index" class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
 			<div class="playlist__item_box">
 				<div class="playlist__cover mod_cover" style="visibility: visible;">
 					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
+						<img :src=" `//y.gtimg.cn/music/photo_new/T002R150x150M000` + item.album.mid + `.jpg?max_age=2592000`" class="playlist__pic" style="display: block; visibility: visible;">
 						<i class="mod_cover__mask"></i>
 						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
 					</a>
 				</div>
 				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
+					<span :title="item.title" class="playlist__title_txt">
+						<a>{{item.title}}</a>
 					</span>
 				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
-				</div>
-			</div>
-		</li>
-				<li class="playlist__item slide__item " onmouseover="this.className=(this.className+' playlist__item--hover')" onmouseout="this.className=this.className.replace(/ playlist__item--hover/, '')" data-albummid="001VFoZM3iVrPo" data-albumid="4054658">
-			<div class="playlist__item_box">
-				<div class="playlist__cover mod_cover" style="visibility: visible;">
-					<a class="js_album">
-						<img src="//y.gtimg.cn/music/photo_new/T002R800x800M000001VFoZM3iVrPo.jpg?max_age=2592000" alt="江湖" class="playlist__pic" style="display: block; visibility: visible;">
-						<i class="mod_cover__mask"></i>
-						<i class="mod_cover__icon_play js_play" data-stat="y_new.index.album.play_btn"></i>
-					</a>
-				</div>
-				<h4 class="playlist__title">
-					<span class="playlist__title_txt">
-						<a>江湖</a>
-					</span>
-				</h4>
-				<div class="playlist__author" title="讷木川">
-					<a class="js_singer" title="讷木川">讷木川</a>
+				<div class="playlist__author" :title="item.singer[0].name">
+					<a class="js_singer" :title="item.singer[0].name">{{item.singer[0].name}}</a>
 				</div>
 			</div>
 		</li>
@@ -217,21 +27,20 @@ export default {
 	name: 'nei-di',
 	data() {
 		return {
-			recomData: {}
+			recomData: []
 		}
 	},
 
 	mounted() {
-		 this.$axios.get('/api2/getRecomList').then(
-      res => {
-				this.recomData = res;
-				debugger;
-      }
-    ).catch(
-      error => console.log(error)
-    )
+		// {lan: "内地", name: "neidi", tjreport: "10_0_0_2_10001_1", type: 1}
+		this.$axios.get('/api2/getRecomListNeidi').then(
+			res => {
+				var recomData = res.data.new_song.data.songlist;
+				this.recomData = recomData.slice(0, 15);
+			}).catch(
+				error => console.log(error)
+		)}
 	}
-}
 </script>
 
 <style scoped>
@@ -263,6 +72,7 @@ h4 {
 	height: 20px;
 	font-weight: bold;
 	padding-left: 12px;
+	white-space: nowrap;
 }
 h4 span {
 	float: left;
