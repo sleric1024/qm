@@ -31,6 +31,46 @@ module.exports = {
           '^/api2/getRecomListNeidi': ''
         }
       },
+      '/api2/getRecomListGangtai': {
+        target: 'https://u.y.qq.com/cgi-bin/musicu.fcg?-=recom675796876915197&data={"comm":{"ct":24},"new_song":{"module":"newsong.NewSongServer","method":"get_new_song_info","param":{"type":6}}}',
+        bypass: function (req, res, proxyOptions) {
+          req.headers.referer = 'https://u.y.qq.com';
+          req.headers.host = 'u.y.qq.com';
+        },
+        pathRewrite: {
+          '^/api2/getRecomListGangtai': ''
+        }
+      },
+      '/api2/getRecomListOumei': {
+        target: 'https://u.y.qq.com/cgi-bin/musicu.fcg?-=recom16321017681007333&data={"comm":{"ct":24},"new_song":{"module":"newsong.NewSongServer","method":"get_new_song_info","param":{"type":2}}}',
+        bypass: function (req, res, proxyOptions) {
+          req.headers.referer = 'https://u.y.qq.com';
+          req.headers.host = 'u.y.qq.com';
+        },
+        pathRewrite: {
+          '^/api2/getRecomListOumei': ''
+        }
+      },
+      '/api2/getRecomListHanguo': {
+        target: 'https://u.y.qq.com/cgi-bin/musicu.fcg?-=recom8615048014595319&data={"comm":{"ct":24},"new_song":{"module":"newsong.NewSongServer","method":"get_new_song_info","param":{"type":4}}}',
+        bypass: function (req, res, proxyOptions) {
+          req.headers.referer = 'https://u.y.qq.com';
+          req.headers.host = 'u.y.qq.com';
+        },
+        pathRewrite: {
+          '^/api2/getRecomListHanguo': ''
+        }
+      },
+      '/api2/getRecomListRiben': {
+        target: 'https://u.y.qq.com/cgi-bin/musicu.fcg?-=recom37565166530077687&data={"comm":{"ct":24},"new_song":{"module":"newsong.NewSongServer","method":"get_new_song_info","param":{"type":3}}}',
+        bypass: function (req, res, proxyOptions) {
+          req.headers.referer = 'https://u.y.qq.com';
+          req.headers.host = 'u.y.qq.com';
+        },
+        pathRewrite: {
+          '^/api2/getRecomListRiben': ''
+        }
+      }
     },
 
     // Various Dev Server settings

@@ -4,7 +4,11 @@ import Router from 'vue-router'
 import Recommend from '@/components/Recommend/Recommend'
 import Ranking from '@/components/Ranking/Ranking'
 import Search from '@/components/Search/Search'
-import Neid from '@/components/Recommend/Neid'
+import NeiD from '@/components/Recommend/NeiD'
+import GangT from '@/components/Recommend/GangT'
+import OuM from '@/components/Recommend/OuM'
+import HanG from '@/components/Recommend/HanG'
+import RiB from '@/components/Recommend/RiB'
 
 
 Vue.use(Router)
@@ -34,23 +38,23 @@ export default new Router({
     }, {
       name: 'recommoned.neidi',
       path: '/recommond/neidi',
-      component: Neid
+      component: NeiD
     }, {
       name: 'recommoned.gangtai',
       path: '/recommond/gangtai',
-      component: Ranking
+      component: GangT
     }, {
       name: 'recommoned.oumei',
       path: '/recommond/oumei',
-      component: Ranking
+      component: OuM
     }, {
       name: 'recommoned.hanguo',
       path: '/recommond/hanguo',
-      component: Ranking
+      component: HanG
     }, {
       name: 'recommoned.riben',
       path: '/recommond/riben',
-      component: Ranking
+      component: RiB
     }
   ]
 })
