@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import { Indicator } from 'mint-ui';
 export default {
 	name: 'nei-di',
 	data() {
@@ -32,6 +33,7 @@ export default {
 	},
 
 	mounted() {
+		Indicator.open('加载中...');
 		// {lan: "内地", name: "neidi", tjreport: "10_0_0_2_10001_1", type: 1}
 		this.$axios.get('/api2/getRecomListNeidi').then(
 			res => {
@@ -39,8 +41,11 @@ export default {
 				this.recomData = recomData.slice(0, 15);
 			}).catch(
 				error => console.log(error)
-		)}
+		).finally(
+			() => Indicator.close()
+		);
 	}
+}
 </script>
 
 <style scoped>

@@ -37,6 +37,7 @@
 <script>
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { Indicator } from 'mint-ui';
 
 Vue.use(Vuex);
 
@@ -88,6 +89,7 @@ export default {
   },
 
   created () {
+    Indicator.open('加载中...');
     this.$axios.get('/api/getDiscList').then(
       res => {
         var resData = res.data.data;
@@ -96,6 +98,8 @@ export default {
       }
     ).catch(
       error => console.log(error)
+    ).finally(
+      () => Indicator.close()
     )
   }
 }
