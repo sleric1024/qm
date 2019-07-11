@@ -7,19 +7,19 @@
     </mt-header>
     <router-view class="content"></router-view>
     <mt-tabbar v-model="selected">
-    <mt-tab-item id="recommond">
-      <img slot="icon" src="./assets/thumbs-up.png">
-      推荐
-    </mt-tab-item>
-    <mt-tab-item id="ranking">
-      <img slot="icon" src="./assets/stats.png">
-      排行榜
-    </mt-tab-item>
-    <mt-tab-item id="search">
-      <img slot="icon" src="./assets/search.png">
-      搜索
-    </mt-tab-item>
-  </mt-tabbar>
+      <mt-tab-item id="recommond">
+        <img slot="icon" src="./assets/thumbs-up.png">
+        推荐
+      </mt-tab-item>
+      <mt-tab-item id="ranking">
+        <img slot="icon" src="./assets/stats.png">
+        排行榜
+      </mt-tab-item>
+      <mt-tab-item id="search">
+        <img slot="icon" src="./assets/search.png">
+        搜索
+      </mt-tab-item>
+    </mt-tabbar>
   </div>
 </template>
 
@@ -28,9 +28,17 @@ export default {
   data () {
     return {
       msg: 'Hello World!',
-      selected: ''
+      selected: 'recommond'
     }
   },
+  //methods: {
+    // TODO not working
+    // changeHash() {
+    //   this.$nextTick(() => {
+    //     console.log(this.selected);
+    //   });
+  //  }
+ // },
   watch: {
     selected (newval, oldval) {
       // console.log(newval + 'and' + oldval + '\n');
