@@ -21,6 +21,16 @@ module.exports = {
           '^/api/getDiscList': ''
         }
       },
+      '/api/getTopList': {
+        target: 'https://c.y.qq.com/v8/fcg-bin/fcg_myqq_toplist.fcg?format=json',
+        bypass: function (req, res, proxyOptions) {
+          req.headers.referer = 'https://c.y.qq.com';
+          req.headers.host = 'c.y.qq.com';
+        },
+        pathRewrite: {
+          '^/api/getTopList': ''
+        }
+      },
       '/api2/getRecomListNeidi': {
         target: 'https://u.y.qq.com/cgi-bin/musicu.fcg?-=recom09823581245828605&format=json&data={"comm":{"ct":24},"new_song":{"module":"newsong.NewSongServer","method":"get_new_song_info","param":{"type":1}}}',
         bypass: function (req, res, proxyOptions) {
