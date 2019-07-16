@@ -23,6 +23,7 @@ ul li {
 }
 .mint-tabbar {
   position: fixed;
+  z-index: 999;
 }
 .footer_logo {
   display: block;
