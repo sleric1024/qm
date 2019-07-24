@@ -31,6 +31,16 @@ module.exports = {
           '^/api/getTopList': ''
         }
       },
+      '/api/getHotKeys': {
+        target: 'https://c.y.qq.com/splcloud/fcgi-bin/gethotkey.fcg?_=1563893744843&format=json',
+        bypass: function (req, res, proxyOptions) {
+          req.headers.referer = 'https://c.y.qq.com';
+          req.headers.host = 'c.y.qq.com';
+        },
+        pathRewrite: {
+          '^/api/getHotKeys': ''
+        }
+      },
       '/api2/getRecomListNeidi': {
         target: 'https://u.y.qq.com/cgi-bin/musicu.fcg?-=recom09823581245828605&format=json&data={"comm":{"ct":24},"new_song":{"module":"newsong.NewSongServer","method":"get_new_song_info","param":{"type":1}}}',
         bypass: function (req, res, proxyOptions) {
