@@ -36,3 +36,6 @@ ul li {
   text-indent: -9999px;
   margin-top: 25px;
 }
+.mint-header.is-fixed {
+  z-index: 999;
+}
